@@ -14,3 +14,4 @@ jobs:
         server: ftp.dhruboarif.com
         username: fecotrade_test@fecotrade.dhruboarif.com
         password: ${{ secrets.FTP_PASSWORD }}
+        server-dir: /home/arifulislam/fecotrade.dhtuboarif.com
