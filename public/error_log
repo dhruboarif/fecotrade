@@ -1,0 +1,10 @@
+[13-Jul-2023 10:54:15 Europe/London] PHP Warning:  require(/home/fecoadmin/auth.fecotrade.com/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/fecoadmin/auth.fecotrade.com/index.php on line 24
+[13-Jul-2023 10:54:15 Europe/London] PHP Fatal error:  Uncaught Error: Failed opening required '/home/fecoadmin/auth.fecotrade.com/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/fecoadmin/auth.fecotrade.com/index.php:24
+Stack trace:
+#0 {main}
+  thrown in /home/fecoadmin/auth.fecotrade.com/index.php on line 24
+[13-Jul-2023 10:58:16 Europe/London] PHP Warning:  require(/home/fecoadmin/auth.fecotrade.com/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/fecoadmin/auth.fecotrade.com/index.php on line 24
+[13-Jul-2023 10:58:16 Europe/London] PHP Fatal error:  Uncaught Error: Failed opening required '/home/fecoadmin/auth.fecotrade.com/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/fecoadmin/auth.fecotrade.com/index.php:24
+Stack trace:
+#0 {main}
+  thrown in /home/fecoadmin/auth.fecotrade.com/index.php on line 24

@@ -1,0 +1,74 @@
+ /* Video Background Image */
+ #video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+  }
+  
+  #video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .card{
+    background-color: rgba(21, 21, 21, 0.613);
+  }
+  .card-header{
+      color:white;
+  }
+h3{
+      color:white;
+  }
+  .form-control{
+    background-color: rgba(21, 21, 21, 0.613);
+    background: transparent;
+  }
+  
+  .bg-custom{
+      background-color: #1212126d;
+  }
+  @media only screen and (min-width: 480px) and (max-width: 767px) {
+  /* For mobile phones: */
+  
+  #video-background{
+   min-height: 600%;
+  }
+    .card{
+    background-color: rgba(21, 21, 21, 0.613);
+  }
+  .form-control{
+    background-color: rgba(21, 21, 21, 0.613);
+    background: transparent;
+  }
+
+}
+
+    .card-bg{
+      background-color: #1212126d;
+    }
+    .tr-bg{
+      background-color: #0a0a0ada;
+    }
+    .modal-content{
+        background-color:#2216458b;
+        color: white;
+    }
+    .c-app-a {
+        margin-top:200px;
+    }
+    
+#coin-price{
+    width: 80%;
+    font-size:16px;
+}
+
+tbody{
+    color: white;
+}
+.custom-select {
+    padding-right:10px;
+}
