@@ -27,4 +27,4 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /home/arifulislam/fecotrade.dhruboarif.com/
+          server-dir: /fecotrade.dhruboarif.com/
