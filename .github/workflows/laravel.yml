@@ -33,7 +33,9 @@ jobs:
       with:
         cpanel_username: ${{ secrets.CPANEL_USER }}
         cpanel_password: ${{ secrets.CPANEL_PASSWORD }}
-        cpanel_host: ${{ secrets.CPANEL_HOST }}
         cpanel_domain: fecotrade.dhruboarif.com
+        host: ${{ secrets.CPANEL_HOST }}
+        key: ${{ secrets.CPANEL_SSH_PRIVATE_KEY }}
+        script: 'cd /var/www/html && sh ./.scripts/deploy.sh'
         cpanel_directory: /home/arifulislam/fecotrade.dhruboarif.com/
 
