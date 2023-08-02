@@ -1,31 +1,39 @@
-name: Deploy Site on push
+name: Laravel Deployment
+
 on:
   push:
     branches:
-      - main
+      - main  # Change this to your main branch name, if different
+
 jobs:
-  web-deploy:
-    name: Deploy
+  deploy:
     runs-on: ubuntu-latest
+
     steps:
-    - name: Get the latest code
-      uses: actions/checkout@v2.3.2
-    - uses: actions/setup-node@master
-    - name: Installing project dependencies
-      run: npm install
-    - name: Building the project
-      run: npm run production
-    - name: Copy .env
-      run: php -r "file_exists('.env') || copy('.env.example', '.env');"
-    - name: Install Dependencies
-      run: composer update --ignore-platform-reqs
-    - name: Generate key
-      run: php artisan key:generate
-    - name: Directory Permissions
-      run: chmod -R 777 storage bootstrap/cache
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@4.0.0
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up PHP
+      uses: shivammathur/setup-php@v2
       with:
-        server: ftp.dhruboarif.com
-        username: ${{ secrets.FTP_USERNAME}}
-        password: ${{ secrets.FTP_PASSWORD}}
+        php-version: '7.4'  # Change this to your desired PHP version
+        extensions: |
+          pdo
+          pdo_mysql
+          # Add any other required PHP extensions
+
+    - name: Install dependencies
+      run: composer install --no-dev --prefer-dist --no-scripts --no-progress --no-suggest
+
+    - name: Build assets (if applicable)
+      # Add any command to build your assets (e.g., npm run production)
+
+    - name: Deploy to cPanel
+      uses: mohit-kumar-s/cpanel-git-deploy@v2
+      with:
+        cpanel_username: ${{ secrets.CPANEL_USER }}
+        cpanel_password: ${{ secrets.CPANEL_PASSWORD }}
+        cpanel_host: ${{ secrets.CPANEL_HOST }}
+        cpanel_domain: fecotrade.dhruboarif.com
+        cpanel_directory: /home/arifulislam/fecotrade.dhruboarif.com/
+
